@@ -7,6 +7,9 @@ Given nums = [2, 7, 11, 15], target = 9,
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
  */
+
+import java.util.*;
+
 public class Two_Sum {
 	/*
 	 * iterative method with n^2 time complexity
@@ -37,5 +40,23 @@ public class Two_Sum {
 	 * the value we get after substraction, we will use it to compare it to the hashmap key
 	 * if matched then current i in for loop and i-value of the hasmap will be j
 	 */
+	
+	public int[] twoSum_Hash(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i<nums.length; i++)
+        {
+            
+            int j = target- nums[i];
+            if (map.containsKey(j))
+            {
+                int x = map.get(j);
+                int a[] = {x,i};
+                return a;
+            }
+            map.put(nums[i], i);
+            
+        }
+        return null;
+    }
 
 }
