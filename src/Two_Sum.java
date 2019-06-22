@@ -39,6 +39,7 @@ public class Two_Sum {
 	 * next we run for loop and substracting each element from the target
 	 * the value we get after substraction, we will use it to compare it to the hashmap key
 	 * if matched then current i in for loop and i-value of the hasmap will be j
+	 * Time complexity - O(n)
 	 */
 	
 	public int[] twoSum_Hash(int[] nums, int target) {
