@@ -8,9 +8,34 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
  */
 public class Two_Sum {
+	/*
+	 * iterative method with n^2 time complexity
+	 */
 	public int[] twoSum(int[] nums, int target) {
-		return nums;
+		for (int i = 0; i<nums.length; i++)
+        {
+            for (int j = i+1; j < nums.length; j++)
+            {
+                if (nums[i] + nums[j] == target)
+                {
+                    int a[];
+                    a = new int[2];
+                    a[0] = i;
+                    a[1] = j;
+                    return a;
+                }
+            }
+        }
+        return null;
 	
 	}
+	
+	/*
+	 * Another way we can do this is by using hashmap
+	 * here we will store all the key in hashmap according to the number's value
+	 * next we run for loop and substracting each element from the target
+	 * the value we get after substraction, we will use it to compare it to the hashmap key
+	 * if matched then current i in for loop and i-value of the hasmap will be j
+	 */
 
 }
